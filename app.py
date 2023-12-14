@@ -14,9 +14,9 @@ from io import BytesIO
 ############################################################################################
 #NEO4J  connection configurations
 # Replace these variables with your Neo4j credentials and ngrok URL
-neo4j_url = "neo4j+s://6b1d65ac.databases.neo4j.io"
+neo4j_url = "neo4j+s://b13c6d09.databases.neo4j.io" #"neo4j+s://6b1d65ac.databases.neo4j.io"
 neo4j_username = "neo4j"
-neo4j_password = "70PJgGqnEWpM7eWmaAnGQXFb4I6g7NwVWWBNwVn4faU"
+neo4j_password = "FvCBo3Di7UMJaKIihB5pHQSqH-81Cl8REjgVnwIOvLs" #"70PJgGqnEWpM7eWmaAnGQXFb4I6g7NwVWWBNwVn4faU"
 
 driver = GraphDatabase.driver(neo4j_url, auth=(neo4j_username, neo4j_password))
 ##############################################################################################
