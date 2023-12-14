@@ -1,0 +1,561 @@
+
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-top: 29px;
+    padding-left: 10px;
+    background-color: transparent;
+    
+}
+
+nav .logo {
+    width: 51.144px;
+    height: 46.51px;
+    flex-shrink: 0;
+    background: url(../images/Logo.png);
+}
+a{
+    text-decoration: none;
+}
+nav ul {
+    padding-right: 45%;
+    background-color: transparent;
+}
+
+nav ul li {
+    display: inline-block;
+    list-style: none;
+    margin: 0px 20px;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: black;
+    font-family: revert;
+    font-size: 20px;
+}
+
+
+.Header-text {
+    padding-top: 140px;
+    padding-left: 260px !important;
+}
+
+.Header-text h1 {
+    display: flex;
+    width: 596px;
+    height: 135px;
+    flex-direction: column;
+    flex-shrink: 0;
+    color: rgba(0, 0, 0, 0.87);
+    font-family: revert;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 64px;
+}
+
+.Header-text p {
+    display: flex;
+    width: 557px;
+    height: 79px;
+    flex-direction: column;
+    flex-shrink: 0;
+    color: rgba(0, 0, 0, 0.87);
+    font-family: revert;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 36px;
+
+}
+
+.but1 {
+    display: inline-flex;
+    width: 200px;
+    height: 50px;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    color: #00BCD4;
+}
+
+.button1 {
+    border-radius: 8px !important;
+    border: 1px solid #00BCD4;
+    background: #FFF;
+    box-shadow: 0px 3px 24px 4px rgba(0, 0, 0, 0.06);
+
+
+}
+
+.button {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 70%;
+}
+
+.button1 svg {
+    width: 50px;
+    height: 18.502px;
+    flex-shrink: 0;
+    /* meeka class valin hadanna.anith buttn dann be nethinam-=-=-=-= meka hari  */
+
+}
+
+
+.Header-img {
+    width: 700px;
+    height: 700px;
+    flex-shrink: 0;
+    display: inline-flex;
+    z-index: -1;
+
+}
+.header-art{
+    width: 997.985px;
+height: 931.455px;
+transform: rotate(0deg);
+flex-shrink: 0;
+z-index: -1;
+    position: absolute;
+    top: 0px;
+    left: 944px;
+    fill-opacity: 50%;
+}
+.other-art{
+    position: relative;
+}
+.other-art .otherpage-bac{
+    width: 936.985px;
+    height: 823.455px;
+    transform: rotate(12deg);
+    flex-shrink: 0;
+    z-index: -1;
+    position: absolute;
+    top: -133px;
+    left: -130px;
+    fill-opacity: 50%;
+}
+
+.Pagination {
+    padding-left: 250px;
+    padding-right: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 90%;
+}
+
+.Pagination .item1 h1 {
+    color: #2196F3;
+    font-family: revert;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 42px;
+}
+
+.Pagination .bar {
+    margin: 0%;
+    border-radius: 18.5px;
+    background: #2196F3;
+    width: 50%;
+    height: 11.5px !important;
+    flex-shrink: 0;
+    opacity: unset;
+}
+
+.Pagination svg {
+    stroke-width: 1px;
+    stroke: rgba(0, 0, 0, 0.12);
+    width: 1px;
+    height: 63px;
+    flex-shrink: 0;
+}
+
+/* header end
+about start*/
+.aboutart{
+    position: relative;
+
+}
+.aboutsvg1 {
+    position: absolute;
+    top: 151px;
+    left: 178px;
+
+}
+
+.aboutsvg2 {
+    position: absolute;
+    top: 147px;
+    left: 140px;
+
+}
+
+.aboutsvg3 {
+    position: absolute;
+    top: 209px;
+    left: 531px;
+
+}
+
+.aboutsvg4 {
+    position: absolute;
+    top: 539px;
+    left: 444px;
+
+
+}
+
+.aboutsvg5 {
+    position: absolute;
+    top: 304px;
+    left: 254px;
+
+}
+
+.aboutsvgtext {
+    color: #FFF;
+    font-family: revert;
+    font-size: 52px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 64px;
+}
+
+.aboutsvg6 {
+    position: absolute;
+    top: 407px;
+    left: 643px;
+
+}
+
+.abouttext {
+    padding-top: 150px;
+
+}
+
+.counters h3 {
+    color: rgba(0, 0, 0, 0.87);
+    text-align: center;
+    font-family: revert;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 48px;
+    text-transform: uppercase;
+}
+
+.counters {
+    padding-left: 47px;
+    padding-right: 274px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.counter-content {
+    align-items: center;
+    text-align: center;
+
+}
+
+.counters .bar {
+    margin: 0%;
+    border-radius: 18.5px;
+    background: #2196F3;
+    width: 50%;
+    height: 11.5px !important;
+    flex-shrink: 0;
+    opacity: unset;
+    display: inline-block;
+
+}
+
+
+/*about end
+valus start*/
+.valueart{
+    position: relative;
+}
+.valuesvg1 {
+    position: absolute;
+    top: 22px;
+    left: 154px;
+}
+
+.valuesvg2 {
+    position: absolute;
+    top: 71px;
+    left: 218px;
+}
+
+.valuesvg3 {
+    position: absolute;
+    top: 113px;
+    left: 283px;
+}
+
+.valuesvg4 {
+    position: absolute;
+    top: 176px;
+    left: 366px;
+}
+
+.valuesvg5 {
+    position: absolute;
+    top: -66px;
+    left: 355px;
+
+}
+
+.valuesvg6 {
+    position: absolute;
+    top: 40px;
+    left: 137px;
+}
+
+.valuesvg7 {
+    position: absolute;
+    top: 362px;
+    left: 477px;
+}
+
+.valuesvg8 {
+    position: absolute;
+    top: 103px;
+    left: 541px;
+}
+
+.valuesvg9 {
+    position: absolute;
+    top: 167px;
+    left: 587px;
+
+}
+
+.valuesvg10 {
+    position: absolute;
+    top: 316px;
+    left: 233px;
+
+}
+
+.valuesvg11 {
+    position: absolute;
+    top: 417px;
+    left: 157px;
+
+}
+
+
+/*End of Value 
+institutions start*/
+.itext {
+    padding-left: 376px !important;
+}
+
+.itext h1 {
+    color: #0D47A1;
+    font-family: revert;
+    font-size: 52px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 78px;
+    padding-bottom: 10px;
+}
+
+.itext h4 {
+    padding-bottom: 10px;
+}
+
+.iimg img {
+    padding-bottom: 10px;
+}
+
+.svglayer {
+    /* position: absolute; */
+    z-index: 1;
+}
+
+.otherpage-bac{
+fill-opacity: 50%;
+
+}
+.imgsummry {
+    position: absolute;
+    width: 626px;
+    height: 458px;
+    flex-shrink: 0;
+    top: 70%;
+    left: 60%;
+    transform: translate(-20%, -70%);
+    z-index: -1;
+}
+
+.layerchangequary {
+    position: relative;   
+    transform: translate(0%, -1350%);
+    z-index: 0;
+}
+
+.qarytextare{
+    position: relative;
+    height: 200px;
+    /* transform: translate(0%, -725%); */
+    margin-top: -500px;
+    z-index: 0;
+}
+
+.layerchangeresource {
+    position: relative;
+    flex-shrink: 0;
+    width: 1350px;
+    transform: translate(0%, -900%);
+    z-index: 2;
+}
+.layerchange {
+    position: relative;
+    flex-shrink: 0;
+    width: 1350px;
+    height: auto;
+    /* transform: translate(0%, -100%); */
+    margin-top: -600px;
+    z-index: 2;
+}
+.resourcetextare {
+    position: relative;
+    flex-shrink: 0;
+    /* transform: translate(0%, -100%); */
+    margin-top: 30px;
+    margin-left: 51px;
+    /* margin-right: 50px; */
+    z-index: 2;
+}
+
+.fixed-box {
+    position: absolute;
+    top: 60%;
+    left: 19%;/*before it was 19%
+    /* transform: translate(-0%, 0%); */
+    width: 1170px; /* Adjust the width as needed */
+    height: 400px ;/* Adjust the height as needed (before it was 400 px)*/
+    overflow: auto;
+    border: 1px solid #8a7e7e;
+    border-radius: 5px;
+    
+  }
+  
+  .content {
+    padding: 20px;
+  }
+.searchcol{
+    background-color: aqua;
+}
+
+
+.footerleftsvg2 {
+    /* position: absolute; */
+    width: 255px;
+    height: 254px;
+    flex-shrink: 0;
+    transform: translate(-20%, -100%);
+    z-index: -1;
+}
+
+.footerleftsvg1 {
+    width: 191px;
+    height: 191px;
+    flex-shrink: 0;
+    transform: translate(25%, -50%);
+    z-index: -1;
+}
+
+.footerrightsvg2 {
+    /* position: absolute; */
+    width: 255px;
+    height: 254px;
+    flex-shrink: 0;
+    transform: translate(-25%, -100%);
+    z-index: -1;
+    overflow: hidden;
+    
+}
+
+.footerrightsvg1 {
+    transform: translate(-50%, -55%);
+    width: 191px;
+    height: 191px;
+    flex-shrink: 0;
+    z-index: -1;
+}
+
+.footer{
+    padding-top: 10px;
+height:200px;
+width: 100vh;
+overflow: hidden;
+}
+.text-dark{
+    text-decoration: none;
+}
+
+.icon .fa-brands{
+
+    padding-left: 13px;
+}
+.list-unstyled li{
+    padding-bottom: 10px;
+}
+.fixed-box .input-group{
+    padding-bottom: 9px;
+}
+.fixed-box .input-group-text{
+    min-width: 184px;
+    justify-content: space-evenly;
+}
+.scroll-up-btn {
+    position: fixed;
+    bottom: 90px;
+    right: 20px;
+    display: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #2196F3;
+    color: #ffffff;
+    font-size: 24px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    z-index: 9999;
+  }
+  
+  .scroll-up-btn.show {
+    display: block;
+  }
+  
+  .rtext h1{
+    color: #0D47A1;
+    font-family: revert;
+    font-size: 52px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 78px;
+    padding-bottom: 10px;
+    padding-top: 17px;
+    display: flex;
+    justify-content: space-evenly;
+    
+  }
+  .break{
+    padding-top: 190px !important;
+  }

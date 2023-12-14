@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>legalQuaries</title>
+    <link rel="stylesheet" href="./CSS/index.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+    <script src="https://kit.fontawesome.com/93909da28a.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(function () {
+            $("#footer").load("./footer");
+        });
+    </script>
+    <script>
+        $(function () {
+            $("#navebar").load("./navbar");
+        });
+    </script>
+</head>
+
+<body class="container-fluid">
+    <div class="other-art">
+        <svg xmlns="http://www.w3.org/2000/svg" width="825" height="630" viewBox="0 0 825 630" fill="none"
+            class="svgcoler otherpage-bac">
+            <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M393.244 588.819C349.358 638.405 273.602 643.072 223.962 599.247L-345.271 96.6897C-399.033 49.2251 -399.433 -34.4881 -346.126 -82.4636L165.284 -542.729C214.529 -587.05 290.375 -583.075 334.718 -533.849L793.714 -24.315C834.566 21.0345 834.868 89.824 794.416 135.531L393.244 588.819Z"
+                fill="#BBDEFB" />
+        </svg>
+
+    </div>
+    <div id="navebar">
+        {% include 'navbar.html' %}
+    </div>
+    <div class="row g-3">
+        <div class="col-sm-7">
+
+        </div>
+        <div class="col-sm-3 ">
+            <img src="./static/images/summary 1.png" class="imgsummry" />
+        </div>
+    </div>
+    <div class="container" style="padding-top: 624px;">
+
+      
+
+
+        <!--<div class="input-group mb-3 layerchangequary">-->
+            <form action="/get_answer" method="POST"> <!-- Update action with your route name -->
+              <div class="input-group mb-3 layerchangequary" > 
+                <input type="search" class="form-control" placeholder="please enter your query.." name="question" >
+                <span class="input-group-text" ><i class="fa-solid fa-magnifying-glass fa-lg" style="color: #0e47a1;"></i></span>
+            
+                <input type="submit" class="btn btn-primary" value="Get Answer"></div>
+            </form>
+        <!--</div>-->
+        <div class="input-group mb-3 qarytextare">
+            <textarea class="form-control"  readonly>{{ answer }}</textarea>
+            <textarea class="form-control"  readonly>{{ document_name }}</textarea>
+        </div>
+        </div>
+    </div>
+
+    <div id="footer">{% include 'footer.html' %}</div>
+</body>
+
+</html>

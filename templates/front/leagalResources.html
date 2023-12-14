@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>leagal Resurces</title>
+    <link rel="stylesheet" href="./CSS/index.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/93909da28a.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+      $(function() {
+        $("#footer").load("./footer");
+      });
+    </script>
+    <script>
+      $(function() {
+        $("#navebar").load("./navbar");
+      });
+    </script>
+<style type="text/css" >
+      .result-item {
+        margin-bottom: 20px;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        background-color: #f9f9f9;
+        text-align: left;
+    }
+
+    .result-item p {
+        margin: 5px 0;
+    }
+</style>
+
+  </head>
+ 
+<body class="container-fluid">
+  <div class="other-art">
+    <svg xmlns="http://www.w3.org/2000/svg" width="825" height="630" viewBox="0 0 825 630" fill="none" class="svgcoler otherpage-bac">
+      <path fill-rule="evenodd" clip-rule="evenodd" d="M393.244 588.819C349.358 638.405 273.602 643.072 223.962 599.247L-345.271 96.6897C-399.033 49.2251 -399.433 -34.4881 -346.126 -82.4636L165.284 -542.729C214.529 -587.05 290.375 -583.075 334.718 -533.849L793.714 -24.315C834.566 21.0345 834.868 89.824 794.416 135.531L393.244 588.819Z" fill="#BBDEFB"/>
+    </svg>
+    <div id="navebar">
+  {% include 'navbar.html' %}
+    </div>
+
+  </div>
+    <div class="row g-3" >
+        <div class="col-sm-7">
+         
+        </div>
+        <div class="col-sm-3 "> 
+          <img src="./static/images/summary 1.png" class="imgsummry" />
+      </div>
+      </div>
+      <div class="rtext">
+        <h1>Enter your search queries</h1>
+      </div>
+
+    <div class="container" style="padding-top: 640px; padding-bottom: 200px;">
+    
+      <div class="input-group mb-8 layerchange" > 
+        <div class="formcol">
+          <form class="row g-3 justify-content-around" action="/leagalResurces" method="POST" >
+              <div class="col-md-5">
+                
+                <input type="text" placeholder="Search by case number" class="form-control" name="query">
+              </div>
+              <div class="col-md-5">
+                
+                <input type="text" class="form-control" placeholder="Search by plaintiff " name="query_plaintiff">
+              </div>
+              <div class="col-md-5">
+                  
+                  <input type="text" class="form-control" placeholder="Search by defendant " name="query_defendant">
+                </div>
+                <div class="col-md-5">
+                  
+                  <input type="text" class="form-control" placeholder="Search by judge " name="query_judge">
+                </div>
+                <div class="col-md-5">
+                  
+                  <input type="text" class="form-control" placeholder="Search by legal case reference " name="query_case_reference" >
+                </div>
+                <div class="col-md-5">
+                  
+                  <input type="text" class="form-control" placeholder="Search by judgments " name="judgments">
+                </div>
+                <div class="col-md-5">
+                    
+                    <input type="text" class="form-control" placeholder="Search by decided on date " name="decided_on">
+                  </div>
+                  <div class="col-md-5">
+                    
+                    <input type="text" class="form-control" placeholder="Search by other parties" name="other_parties">
+                  </div>
+                  <div class="row g-3 justify-content-around">
+                  <div class="col-md-5" style="
+                  padding-left: 120px;
+              "> 
+                    <button class="formbutton btn btn-success " type="reset" style="
+                    background-color: #b7dfff;
+                    color: black;
+                    border: none;
+                    min-width: 297px;
+                    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
+                    ">Reset</button>
+                  </div>
+                  <div class="col-md-5" style="
+                  padding-left: 120px;
+              ">
+                    <button class="formbutton   btn btn-success " type="submit" style="background-color: #b7dfff;
+                    color: black;
+                    border: none; min-width: 297px;box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);">Search</button>
+                  </div>
+                </div> 
+                  
+              
+              </form>        
+      </div>
+    </div> 
+  <div class="break">
+    
+    
+    <div class="fixed-box">
+
+      <div class="content">
+        {% if result %}
+        {% for item in result %}
+        <div class="result-item">
+        <div class="input-group">
+          <span class="input-group-text" style="background-color:#0D47A1; color: white;" id="inputGroup-sizing-sm">Case</span>
+          <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" value="{{ item.Case }}" readonly>
+        </div>
+
+        <div class="input-group">
+          <span class="input-group-text" style="background-color: rgb(183 223 255); color: black;">Legal Case References</span>
+          <textarea class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" value="{{ item['Legal Case References'] }}" readonly>{{ item['Legal Case References'] }}</textarea>
+        </div>
+        
+        <div class="input-group">
+          <span class="input-group-text" style="background-color: rgb(183, 223, 255); color: black;">Legal Concepts</span>
+           <textarea class="form-control" aria-label="Sizing example input"
+           aria-describedby="inputGroup-sizing-sm" value="{{ item['Legal Concepts'] }}" readonly>{{ item['Legal Concepts'] }}</textarea>
+       <!-- Add details for legal concept -->
+      </div>
+        <div class="input-group">
+          <span class="input-group-text" style="background-color: rgb(183 223 255); color: black;">Plaintiff</span>
+          <input type="text" class="form-control" aria-label="Sizing example input"aria-describedby="inputGroup-sizing-sm" value="{{ item['Plaintiff'] }}"readonly>
+                                <!-- Add details for Plaintiff -->
+        </div>
+
+        <div class="input-group">
+          <span class="input-group-text" style="background-color: rgb(183 223 255); color: black;">Defendant</span>
+           <input type="text" class="form-control" aria-label="Sizing example input"aria-describedby="inputGroup-sizing-sm" value="{{ item['Defendant'] }}" readonly>
+                                <!-- Add details for Plaintiff -->
+        </div>
+        <div class="input-group">
+        <span class="input-group-text" style="background-color: rgb(183, 223, 255); color: black;">Other Parties</span>
+         <textarea class="form-control" aria-label="Sizing example input"
+         aria-describedby="inputGroup-sizing-sm" value="{{ item['Other Parties'] }}" readonly>{{ item['Other Parties'] }}</textarea>
+                                <!-- Add details for other parties -->
+        </div>
+        <div class="input-group">
+          <span class="input-group-text" style="background-color: rgb(183, 223, 255); color: black;">Counsel</span>
+           <textarea  class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" value="{{ item['Counsel'] }}" readonly>{{ item['Counsel'] }}</textarea>
+                                  <!-- Add details for counsel -->
+          </div>
+
+        <div class="input-group">
+        <span class="input-group-text" style="background-color: rgb(183, 223, 255); color: black;">Judge 1</span>
+         <input type="text"  class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" value="{{ item['Judge 1'] }}" readonly>
+                                <!-- Add details for Judge 1 -->
+        </div>
+        <div class="input-group">
+        <span class="input-group-text" style="background-color: rgb(183, 223, 255); color: black;">Judge 2</span>
+        <input type="text" class="form-control" aria-label="Sizing example input"
+                                    aria-describedby="inputGroup-sizing-sm" value="{{ item['Judge 2'] }}"  readonly>
+                                <!-- Add details for Judge 2 -->
+        </div>
+         <div class="input-group">
+         <span class="input-group-text" style="background-color: rgb(183, 223, 255); color: black;">Judge 3</span>
+                                    <input type="text" class="form-control" aria-label="Sizing example input"
+                                    aria-describedby="inputGroup-sizing-sm" value="{{ item['Judge 3'] }}"readonly>
+                                <!-- Add details for Judge 3 -->
+        </div>
+        <div class="input-group">
+        <span class="input-group-text" style="background-color: rgb(183, 223, 255); color: black;">Argued On</span>
+        <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" value="{{ item['Argued On'] }}" readonly>
+                                <!-- Add details for Argued On -->
+        </div>
+        <div class="input-group">
+         <span class="input-group-text"
+                                    style="background-color: rgb(183, 223, 255); color: black;">Decided On</span>
+                                    <input type="text" class="form-control" aria-label="Sizing example input"
+                                    aria-describedby="inputGroup-sizing-sm" value="{{ item['Decided On'] }}"readonly>
+                                <!-- Add details for Decided On-->
+        </div>
+         <div class="input-group">
+                                   <span class="input-group-text" style="background-color: rgb(183, 223, 255); color: black;">Judge 1 Judgement</span>
+                                    <textarea class="form-control" aria-label="Sizing example input"
+                                    aria-describedby="inputGroup-sizing-sm" value="{{ item['Judge 1 Decision'] }}" readonly>{{ item['Judge 1 Decision'] }}</textarea>
+                                <!-- Add details for Judgement 1 -->
+         </div>
+         <div class="input-group">
+                                <span class="input-group-text"
+                                    style="background-color: rgb(183, 223, 255); color: black;">Judge 2 Judgement</span>
+                                    <input type="text" class="form-control" aria-label="Sizing example input"
+                                    aria-describedby="inputGroup-sizing-sm" value="{{ item['Judge 2 Decision'] }}"readonly>
+                                <!-- Add details for Judgement 2 -->
+          </div>
+          <div class="input-group">
+          <span class="input-group-text" style="background-color: rgb(183, 223, 255); color: black;">Judge 3 Judgement</span>
+          <input type="text" class="form-control" aria-label="Sizing example input"
+                                    aria-describedby="inputGroup-sizing-sm" value="{{ item['Judge 3 Decision'] }}"readonly>
+                                <!-- Add details for Judgement 3 -->
+           </div>
+
+
+
+
+
+        <!-- Add the "Download Document" button for each result -->
+        <div class="row justify-content-end">
+          <div class="col-md-8 mb-4 mt-4" style="align-items: center;">
+            <a href="{{ url_for('download_result', case_id=item.Case) }}" class="formbutton btn btn-success"
+   style="background-color: rgb(183 223 255); border: none; color: black; min-width: 297px; box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);"
+   download>Download Document</a>
+
+
+          </div>
+        </div>
+      </div>
+          {% endfor %}
+          {% endif %}
+    </div>
+  </div>
+</div>
+</div>
+      <div id="footer">{% include 'footer.html' %}</div>
+</body>
+</html>

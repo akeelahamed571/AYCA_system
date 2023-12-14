@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="./CSS/index.css" >
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/93909da28a.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+      window.onscroll = function() { scrollFunction() };
+
+function scrollFunction() {
+  var scrollButton = document.querySelector('.scroll-up-btn');
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    scrollButton.classList.add('show');
+  } else {
+    scrollButton.classList.remove('show');
+  }
+}
+
+function scrollToTop() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+
+    </script>
+    <script>
+      function redirectToQuery() {
+        window.location.href = "./legalQuaries";
+      }
+    </script>
+    <script>
+      function redirectToSum() {
+        window.location.href = "./summarization";
+      }
+    </script>
+    <script>
+      $(function() {
+        $("#footer").load("./footer.html");
+      });
+    </script>
+    <script>
+      $(function() {
+        $("#navebar").load("./navbar.html");
+      });
+    </script>
+
+</head>
+
+<body class=" container-fluid">
+    <header>
+      <!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 801 678" fill="none" class="header-art">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M773.897 639.425C729.847 686.878 656.095 690.828 607.228 648.353L41.7378 156.833C-13.8293 108.534 -13.2015 22.0476 43.0609 -25.4393L540.073 -444.93C588.433 -485.747 660.177 -481.994 704.015 -436.356L1168.9 47.6268C1212.97 93.4982 1213.58 165.781 1170.31 212.397L773.897 639.425Z" fill="#BBDEFB"/>
+      </svg> -->
+      <div class="row">
+      <div id="navebar">
+        {% include 'navbar.html' %}
+      </div>
+
+      </div>
+      
+      <div class="row justify-content-center">
+            <div class=" col-md-7 align-self-center">
+              <div class="row">
+                <h1>
+                    Sri Lanka’s Premiere Legal Information System
+                </h1>
+                <p>Unlocking Sri Lanka's legal landscape with our premiere information retrieval system.
+                </p>
+              </div>
+                <div class="row ">
+                  <div class="col-md-6">      
+                <div class="row justify-content-between" >
+                  <div class="col-md-4">
+                    <button class="but1 button1" onclick="redirectToQuery()" >Ask A Query <svg xmlns="http://www.w3.org/2000/svg" width="16" height="19">
+                        viewBox="0 0 16 19" fill="none">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M0 18.5019L15.905 9.25099L0 0.00012207V7.19523L11.3935 9.25099L0 11.3068V18.5019Z"
+                            fill="#00BCD4" />
+                    </svg> </button>
+                  </div>
+                
+                  <div class="col-md-4">
+                <button class="but1 button1" onclick="redirectToSum()">Summarize <svg xmlns="http://www.w3.org/2000/svg" width="16" height="19"
+                        viewBox="0 0 16 19" fill="none">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M0 18.5019L15.905 9.25099L0 0.00012207V7.19523L11.3935 9.25099L0 11.3068V18.5019Z"
+                            fill="#00BCD4" />
+                    </svg></button></div>
+                </div>
+              </div>
+                </div>
+
+
+            </div>
+            
+            <div class="col-md-5">
+                
+                <img src="/static/images/LawVecotor-1 2.png" alt="style" style="height: 500px ;width: 500px;">
+
+                
+            </div>
+        </div>
+     
+        <!-- <div class="Pagination"> -->
+<div class="row">
+  <div class="col-md-4">
+            <div class="item1">
+                <h1>Legal Query Solution</h1>
+                <p>Get your legal queries answered</p>
+                <hr class="bar" />
+            
+          </div>
+            <svg xmlns="http://www.w3.org/2000/svg" width="1" height="64" viewBox="0 0 1 64" fill="none">
+                <path d="M0.5 1.49854V63.4985" stroke="black" stroke-opacity="0.12" stroke-linecap="square"/>
+              </svg>
+            </div>
+              <div class="col-md-4">
+            <div class="item2">
+                <h1>Document Summary</h1>
+                <p>Summarize your case files</p>
+            </div>
+            <svg xmlns="http://www.w3.org/2000/svg" width="1" height="64" viewBox="0 0 1 64" fill="none">
+                <path d="M0.5 1.49854V63.4985" stroke="black" stroke-opacity="0.12" stroke-linecap="square"/>
+              </svg>
+            </div>
+              <div class="col-md-4">
+            <div class="item3">
+                <h1>Legal Resources </h1>
+                <p>Discover a wealth of legal resources</p>
+            </div>
+          </div>
+          </div>
+
+        <!-- </div> -->
+
+
+    </header>
+    <button class="scroll-up-btn" onclick="scrollToTop()">&#8679;</button>
+
+
+        <div class="row align-items-center justify-content-start">
+            <div class="col-md-4 col align-self-end">
+            <img src="./static/images/aboutusimg.png" alt="" style="height: 400px ;width: 500px;">
+            </div>
+            <div class="col-md-8 ">
+              <div class="row">
+                <h2 style=" padding-top: 121px;">A Legal Information System, Just for Sri Lanka</h2>
+                <p style="max-width: 700px; padding-top: 10px;">AYCA is Sri Lanka’s first state of the art Legal Information Retrieval System. The system is specifically curated to the Sri Lankan legal industry. The system aims to modernize and democratize law in Sri Lanka.</p>
+                </div>
+                <div class="row justify-content-evenly align-self-start">
+                <div class="counters">
+                    <div class="couter1 counter-content col-md-2">
+                        <h2>+200</h2>
+                        <hr class="bar" />
+                        <h3>QUERIES</h3>
+                    </div>
+                    <div class="couter2 counter-content col-md-3">
+                        <h2>+50</h2>
+                        <hr class="bar" />
+                        <h3>documents</h3>
+                    </div>
+                    <div class="couter3 counter-content col-md-3">
+                        <h2>+1000</h2>
+                        <hr class="bar" />
+                        <h3>Resouces</h3>
+                    </div>
+                    <div class="couter3 counter-content col-md-4"></div>
+                    
+                </div>
+              </div>
+            </div>
+           
+          
+
+        </div>
+
+    
+
+    <div >
+        <div class="row align-items-center justify-content-start">
+            <div class="col-md-4 col ">
+                <img src="./static/images/ourvalue.png" alt="" style="height: 500px ;width: 500px;">
+                    </div>
+            <div class="col-md-8">
+                <h1>We Democratize Law</h1>
+                <p style="max-width: 700px; padding-top: 10px;">The Sri Lankan Legal Information Retrieval system is built upon the core principle of legal knowledge democratization and enabling the access to legal knowledge to all people.</p>
+
+                <div class="row" style="padding-top: 50px;">
+                    <div class="col-md-6">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25" fill="none">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M7.08565 10.6843L5.40577 12.3642L10.8058 17.7642L22.8058 5.7642L21.1259 4.08432L10.8058 14.3441L7.08565 10.6843ZM21.6058 12.9642C21.6058 18.2441 17.2856 22.5642 12.0058 22.5642C6.72594 22.5642 2.40577 18.2441 2.40577 12.9642C2.40577 7.68432 6.72588 3.3642 12.0058 3.3642C12.9058 3.3642 13.8058 3.48432 14.646 3.72426L16.5058 1.8642C15.1259 1.2642 13.6259 0.964203 12.0058 0.964203C5.40577 0.964203 0.00576782 6.3642 0.00576782 12.9642C0.00576782 19.5642 5.40577 24.9642 12.0058 24.9642C18.6058 24.9642 24.0058 19.5642 24.0058 12.9642H21.6058Z" fill="#2196F3"/>
+                          </svg>
+                        <h1>Highest Accuracy</h1>
+                <p style="max-width: 350px; padding-top: 10px; padding-bottom: 50px;" >The system provides highly accurate answers relevant to the legal queries.</p>
+                
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="18" viewBox="0 0 25 18" fill="none" >
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M17.3986 9.23227L12.8872 12.6639C12.8231 12.6586 12.7589 12.6532 12.6948 12.6532C11.7487 12.6532 10.9843 13.4176 10.9843 14.3637C10.9843 15.3098 11.7487 16.0741 12.6948 16.0741C13.6409 16.0741 14.4052 15.3098 14.4052 14.3637C14.4052 14.2995 14.3999 14.2354 14.3945 14.1712L17.8262 9.65989L17.3986 9.23227Z" fill="#651FFF"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12.6948 0.679932C6.08274 0.679932 0.721497 6.04118 0.721497 12.6532C0.721497 14.492 1.13842 16.2292 1.87606 17.7846H3.80568C2.98252 16.3628 2.51214 14.7592 2.44265 13.0808H4.14243V12.2256H2.44265C2.5068 10.6862 2.90769 9.20554 3.60791 7.87459L5.07784 8.72447L5.50546 7.98149L4.03553 7.13695C4.43107 6.5169 4.90145 5.92893 5.43597 5.39441C5.98118 4.85454 6.5745 4.37882 7.20524 3.97793L8.04978 5.43717L8.79277 5.00955L7.94822 3.55031C9.27384 2.85543 10.7384 2.46523 12.2672 2.40109V4.10087H13.1224V2.40109C14.6511 2.46523 16.1157 2.86078 17.4413 3.55031L16.6021 5.00955L17.3451 5.43717L18.1896 3.97793C18.8204 4.37882 19.4137 4.85454 19.9589 5.39441C20.4934 5.92893 20.9585 6.51156 21.3594 7.13695L19.8948 7.98149L20.3224 8.72447L21.7923 7.87459C22.4925 9.20554 22.8934 10.6862 22.9576 12.2256H21.2471V13.0808H22.9469C22.8774 14.7592 22.407 16.3628 21.5839 17.7846H23.5135C24.2511 16.2292 24.668 14.492 24.668 12.6532C24.668 6.04118 19.3068 0.679932 12.6948 0.679932Z" fill="#651FFF"/>
+                  </svg>
+                <h1 >High Performance</h1>
+                <p style="max-width: 350px; padding-top: 10px;" >System digitizes the legal information extraction which overcomes the human latency.</p>
+
+                    </div>
+                    <div class="col-md-6"> 
+                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25" fill="none">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M12.7215 8.39422C10.3641 8.39422 8.43573 10.3228 8.43573 12.6799C8.43573 15.0373 10.3641 16.9656 12.7215 16.9656C15.0789 16.9656 17.0072 15.0373 17.0072 12.6799C17.0072 10.3228 15.0789 8.39422 12.7215 8.39422ZM22.9503 11.5371C22.4358 6.79436 18.6071 2.96566 13.8643 2.45143V0.679932H11.5787V2.45138C6.83593 2.96561 3.00723 6.79431 2.49273 11.537H0.721497V13.8228H2.49268C3.00718 18.5655 6.83582 22.3942 11.5786 22.9087V24.6799H13.8643V22.9088C18.607 22.3943 22.4357 18.5656 22.9503 13.8228H24.7215V11.5371H22.9503ZM12.7215 20.6799C8.3213 20.6799 4.72146 17.08 4.72146 12.6799C4.72146 8.27979 8.3213 4.67995 12.7215 4.67995C17.1216 4.67995 20.7214 8.27984 20.7214 12.6799C20.7214 17.08 17.1216 20.6799 12.7215 20.6799Z" fill="#00BCD4"/>
+                          </svg>
+                        <h1>Precise Extraction</h1>
+                <p style="max-width: 350px; padding-top: 10px; padding-bottom: 50px;" >Answers are precisely extracted for the legal documents of Sri Lanka</p>
+
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25" fill="none" >
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12.7215 8.08007C14.0875 8.08007 15.3769 8.61713 16.3521 9.59234C17.3273 10.5675 17.8644 11.8569 17.8644 13.2229C17.8644 14.1669 17.6275 15.046 17.1602 15.8358C16.7135 16.591 16.0654 17.2306 15.286 17.6854L14.4358 18.1816V19.166V22.9656H11.0072V19.166V18.1816L10.157 17.6854C8.5666 16.7573 7.57864 15.0474 7.57864 13.2229C7.57864 11.8569 8.11569 10.5676 9.09091 9.59234C10.0661 8.61713 11.3555 8.08007 12.7215 8.08007ZM13.8643 0.679932C13.5217 0.679932 11.5787 0.679932 11.5787 0.679932V4.1085H13.8643V0.679932ZM20.7784 3.5655L18.7215 5.62302L20.3214 7.22293L22.3788 5.166L20.7784 3.5655ZM4.66457 3.5655L3.06412 5.16595L5.12159 7.22288L6.7215 5.62302L4.66457 3.5655ZM12.7215 6.36579C8.95028 6.36579 5.86435 9.45172 5.86435 13.2229C5.86435 15.7375 7.236 17.9657 9.29292 19.166V24.6799H16.1501V19.166C18.207 17.9657 19.5786 15.7943 19.5786 13.2229C19.5786 9.45166 16.4927 6.36579 12.7215 6.36579ZM24.7215 12.08H21.2929V14.3658H24.7215V12.08ZM4.15007 12.08H0.721497V14.3658H4.15007V12.08Z" fill="#F38D21"/>
+                  </svg>
+                <h1>Shared Knowledge</h1>
+                <p style="max-width: 350px; padding-top: 10px;" >The system works on a vast knowledge base to serve the users.</p>
+
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div id="institutions">
+        <div class="row align-items-center justify-content-center ">
+            <div class="col-md-4 col " style="padding-left: 100px;">
+                <h1>Legal <br>
+                    Institutions</h1>
+                    <h4>Supreme court</h4>
+                    <h4>Court of appeal</h4>
+                    <h4>Parliament</h4>
+                    <h4>Justice Ministry</h4>
+                    <h4>Attorney General</h4>
+            </div>
+            <div class="col-md-8">
+                <div class="row justify-content-center">
+                    <div class="col-md-6">
+                    
+                        <img src="./static/images/image 1.png" alt="" srcset="" style="padding: 2px;">
+                        <img src="./static/images/image 5.png" alt="" srcset="" style="padding: 2px;">
+                        
+                    </div>
+                    <div class="col-md-6"> 
+                        <img src="./static/images/image 2.png" alt="" srcset="" style="padding: 2px;padding-left: 6px;">
+                        <img src="./static/images/image 3.png" alt="" srcset="" style="padding: 4px;">
+                        <img src="./static/images/image 4.png" alt="" srcset="" style="padding-top: 5px;padding-left: 6px;">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="footer">
+      {% include 'footer.html' %}
+    </div>
+
+</body>
+
+</html>
