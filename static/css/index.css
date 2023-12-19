@@ -440,21 +440,38 @@ fill-opacity: 50%;
     /* margin-right: 50px; */
     z-index: 2;
 }
-
+/*
 .fixed-box {
     position: absolute;
     top: 60%;
     left: 19%;
     /* transform: translate(-0%, 0%); */
-    width: 1170px; /* Adjust the width as needed */
-    height: 400px; /* Adjust the height as needed */
-    overflow: auto;
+   /* width: 1170px; /* Adjust the width as needed */
+   /* height: 400px; /* Adjust the height as needed */
+    /*overflow: auto;
     border: 1px solid #8a7e7e;
     border-radius: 5px;
     
   }
+  */
   
-  .content {
+.fixed-box {
+  position: relative; /* Change from absolute to relative */
+  margin-top: 5vh; /* Example: adjust margin from top */
+  width: 90%; /* Adjust based on your design */
+  max-width: 1170px; /* Maximum width */
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px; /* Example padding */
+  overflow: auto;
+  border: 1px solid #8a7e7e;
+  border-radius: 5px;
+  box-sizing: border-box; /* Ensure padding is included in width */
+}
+
+
+
+.content {
     padding: 20px;
   }
 .searchcol{

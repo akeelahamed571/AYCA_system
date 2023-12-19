@@ -441,18 +441,41 @@ fill-opacity: 50%;
     z-index: 2;
 }
 
-.fixed-box {
+/* .fixed-box {
     position: absolute;
     top: 60%;
     left: 19%;/*before it was 19%
     /* transform: translate(-0%, 0%); */
-    width: 1170px; /* Adjust the width as needed */
-    height: 400px ;/* Adjust the height as needed (before it was 400 px)*/
-    overflow: auto;
+   /* width: 1170px; /* Adjust the width as needed */
+   /* height: 400px ;/* Adjust the height as needed (before it was 400 px)*/
+   /* overflow: auto;
     border: 1px solid #8a7e7e;
     border-radius: 5px;
     
-  }
+  }*/
+
+
+.container {
+    position: relative;
+    /* Other styles for the container */
+}
+
+.fixed-box {
+    position: absolute;
+    top: calc(100% + 20px); /* Adjust the gap as needed */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%; /* Adjust the width as needed */
+    max-width: 1170px; /* Limit the maximum width if required */
+    height: 400px; /* Adjust the height as needed */
+    overflow: auto;
+    border: 1px solid #8a7e7e;
+    border-radius: 5px;
+    z-index: 1; /* Ensure it's above other elements if needed */
+    top: calc(50% + 1px);
+}
+
+
   
   .content {
     padding: 20px;
